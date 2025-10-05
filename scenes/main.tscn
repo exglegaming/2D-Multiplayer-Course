@@ -1,10 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://j2rtu51dup7t"]
+[gd_scene load_steps=2 format=3 uid="uid://j2rtu51dup7t"]
 
 [ext_resource type="Script" uid="uid://y8ndj60s0t2k" path="res://Scripts/Main.cs" id="1_idj7w"]
-[ext_resource type="PackedScene" uid="uid://bwthgwr6h4l62" path="res://Scenes/Player/Player.tscn" id="2_kln2b"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_idj7w")
 
-[node name="Player" parent="." instance=ExtResource("2_kln2b")]
-position = Vector2(607, 331)
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+spawn_path = NodePath("..")
